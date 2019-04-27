@@ -9,3 +9,4 @@ before_install:
 
 script:
   - docker run shmanu17/docker-react npm run test -- --coverage
+  - npm run eject
