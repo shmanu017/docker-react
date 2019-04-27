@@ -1,0 +1,11 @@
+sudo: required
+# super user persmission
+services:
+  - docker
+
+before_install:
+  - docker build -t shmanu17/frontend -f Dockerfile.dev .
+  # . is used for using the current directory
+
+script:
+  - docker run shmanu17/frontend npm run test -- --coverage
